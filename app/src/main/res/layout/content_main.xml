@@ -1,0 +1,10 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android" xmlns:app="http://schemas.android.com/apk/res-auto" xmlns:tools="http://schemas.android.com/tools" android:layout_width="match_parent" android:layout_height="match_parent" android:orientation="vertical" app:layout_behavior="@string/appbar_scrolling_view_behavior" tools:context="com.sollyu.android.option.item.sample.MainActivity" tools:showIn="@layout/activity_main">
+    <LinearLayout android:layout_width="match_parent" android:layout_height="45dp" android:layout_marginTop="20dp" android:background="@android:color/white" android:gravity="center_vertical" android:orientation="horizontal">
+        <TextView android:layout_width="0dp" android:layout_height="wrap_content" android:layout_marginLeft="15dp" android:layout_weight="1" android:text="About" android:textColor="@android:color/black" android:textSize="16sp"/>
+        <TextView android:id="@+id/sbResetLuaScript" android:layout_width="wrap_content" android:layout_height="wrap_content" android:layout_marginRight="15dp" android:text="ads"/>
+    </LinearLayout>
+    <com.sollyu.android.option.item.OptionItemView android:layout_width="match_parent" android:layout_height="35dp" android:layout_marginTop="20dp" app:leftText="asdfasdfedfasdfadf" app:rightText="@string/app_name"/>
+    <com.sollyu.android.option.item.OptionItemLine android:layout_width="match_parent" android:layout_height="0.5dp" android:layout_marginLeft="15dp" android:layout_marginRight="15dp" android:background="@color/colorPrimary"/>
+    <com.sollyu.android.option.item.OptionItemView android:layout_width="match_parent" android:layout_height="35dp" android:layout_marginTop="00dp" app:rightText="Licences"/>
+</LinearLayout>
