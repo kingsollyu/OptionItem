@@ -58,8 +58,15 @@ public class OptionItemSwitch extends OptionItemBase {
         return getSwitch().isChecked();
     }
 
+    public void setCheckedImmediatelyNoEvent(boolean checked) {
+        getSwitch().setCheckedImmediatelyNoEvent(checked);
+    }
+
     @Override
     public void setOnClickListener(@Nullable OnClickListener l) {
         onClickListener = l;
+        if (getSwitch() != null) {
+            getSwitch().setOnClickListener(l);
+        }
     }
 }
