@@ -8,15 +8,15 @@ import android.support.v7.widget.Toolbar;
 import android.view.Menu;
 import android.view.MenuItem;
 import android.view.View;
-import android.widget.LinearLayout;
 import android.widget.Toast;
 
+import com.sollyu.android.option.item.OptionItemSwitch;
 import com.sollyu.android.option.item.OptionItemView;
 
 public class MainActivity extends AppCompatActivity {
 
-    private OptionItemView mOivAbout = null;
-    private LinearLayout linearLayout = null;
+    private OptionItemView   mOivAbout  = null;
+    private OptionItemSwitch mOivSwitch = null;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -33,8 +33,8 @@ public class MainActivity extends AppCompatActivity {
             }
         });
 
-        linearLayout = (LinearLayout) findViewById(R.id.content_main);
         mOivAbout = (OptionItemView) findViewById(R.id.oivAbout);
+        mOivSwitch = (OptionItemSwitch) findViewById(R.id.oisSwitch);
     }
 
     @Override
@@ -61,10 +61,13 @@ public class MainActivity extends AppCompatActivity {
     }
 
     public void onClickTest(View view) {
-        Toast.makeText(this, "dasfasdf", Toast.LENGTH_SHORT).show();
+        Toast.makeText(this, "点击测试", Toast.LENGTH_SHORT).show();
     }
 
     public void onClickSwitch(View view) {
-        Toast.makeText(this, "ssssss", Toast.LENGTH_SHORT).show();
+        Toast.makeText(this, "开关: " + mOivSwitch.isChecked() , Toast.LENGTH_SHORT).show();
+    }
+
+    public void onClickSettings(View view) {
     }
 }
