@@ -14,7 +14,7 @@ import android.widget.TextView;
  * time  : 2017/6/21
  * mail  : sollyu@qq.com
  */
-public class OptionItemBase extends LinearLayout {
+class OptionItemBase extends LinearLayout {
     private TextView mLeftTextView = null;
 
     public OptionItemBase(Context context) {
@@ -36,8 +36,9 @@ public class OptionItemBase extends LinearLayout {
         LayoutParams middleTextViewLayoutParams = new LinearLayout.LayoutParams(0, LayoutParams.WRAP_CONTENT, 1.0f);
         middleTextViewLayoutParams.leftMargin = dip2px(context, 15.0f);
 
+        middleTextView.setClickable(false);
         mLeftTextView.setTextColor(context.getResources().getColor(android.R.color.black));
-
+        mLeftTextView.setClickable(false);
         mLeftTextView.setSingleLine(true);
 
         this.addView(mLeftTextView, rightTextViewLayoutParams);
@@ -46,6 +47,7 @@ public class OptionItemBase extends LinearLayout {
         this.setBackgroundColor(context.getResources().getColor(android.R.color.white));
         this.setOrientation(LinearLayout.HORIZONTAL);
         this.setGravity(Gravity.CENTER_VERTICAL);
+        this.setBackgroundResource(R.drawable.option_item_selector_background);
     }
 
     protected void initView(Context context, @Nullable AttributeSet attrs) {

@@ -17,11 +17,6 @@ import com.kyleduo.switchbutton.SwitchButton;
 public class OptionItemSwitch extends OptionItemBase {
     private SwitchButton mRightSwitch = null;
 
-    public OptionItemSwitch(Context context) {
-        super(context);
-        initView(context);
-    }
-
     public OptionItemSwitch(Context context, @Nullable AttributeSet attrs) {
         super(context, attrs);
         initView(context, attrs);
@@ -30,17 +25,18 @@ public class OptionItemSwitch extends OptionItemBase {
     @Override
     protected void initView(Context context) {
         super.initView(context);
-        mRightSwitch = new SwitchButton(context, null);
-
-        LayoutParams rightTextViewLayoutParams = new LinearLayout.LayoutParams(LayoutParams.WRAP_CONTENT, LayoutParams.WRAP_CONTENT);
-        rightTextViewLayoutParams.rightMargin = dip2px(context, 15.0f);
-
-        this.addView(mRightSwitch, rightTextViewLayoutParams);
     }
 
     @Override
     protected void initView(Context context, @Nullable AttributeSet attrs) {
         super.initView(context, attrs);
+
+        mRightSwitch = new SwitchButton(context, attrs);
+
+        LayoutParams rightTextViewLayoutParams = new LinearLayout.LayoutParams(LayoutParams.WRAP_CONTENT, LayoutParams.WRAP_CONTENT);
+        rightTextViewLayoutParams.rightMargin = dip2px(context, 15.0f);
+
+        this.addView(mRightSwitch, rightTextViewLayoutParams);
 
         TypedArray typedArray = context.obtainStyledAttributes(attrs, R.styleable.OptionItemSwitch);
         typedArray.recycle();
