@@ -57,6 +57,7 @@
         app:leftText="Licences"/>
 
     <com.sollyu.android.option.item.OptionItemSwitch
+        android:onClick="onClickSwitch"
         android:layout_width="match_parent"
         android:layout_height="35dp"
         android:layout_marginTop="20dp"

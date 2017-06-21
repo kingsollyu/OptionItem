@@ -16,6 +16,7 @@ import com.kyleduo.switchbutton.SwitchButton;
  */
 public class OptionItemSwitch extends OptionItemBase {
     private SwitchButton mRightSwitch = null;
+    private OnClickListener onClickListener = null;
 
     public OptionItemSwitch(Context context, @Nullable AttributeSet attrs) {
         super(context, attrs);
@@ -30,8 +31,11 @@ public class OptionItemSwitch extends OptionItemBase {
     @Override
     protected void initView(Context context, @Nullable AttributeSet attrs) {
         super.initView(context, attrs);
-
         mRightSwitch = new SwitchButton(context, attrs);
+
+        if (onClickListener != null) {
+            mRightSwitch.setOnClickListener(onClickListener);
+        }
 
         LayoutParams rightTextViewLayoutParams = new LinearLayout.LayoutParams(LayoutParams.WRAP_CONTENT, LayoutParams.WRAP_CONTENT);
         rightTextViewLayoutParams.rightMargin = dip2px(context, 15.0f);
@@ -52,5 +56,10 @@ public class OptionItemSwitch extends OptionItemBase {
 
     public boolean isChecked() {
         return getSwitch().isChecked();
+    }
+
+    @Override
+    public void setOnClickListener(@Nullable OnClickListener l) {
+        onClickListener = l;
     }
 }
