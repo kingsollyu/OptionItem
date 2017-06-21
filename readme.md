@@ -33,7 +33,7 @@ dependencies {
 
 ## 使用
 
-具体详情请参照: ![content_main.xml](./app/src/main/res/layout/content_main.xml)
+具体详情请参照: [content_main.xml](./app/src/main/res/layout/content_main.xml)
 
 ### 选项
 
