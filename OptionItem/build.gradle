@@ -23,5 +23,5 @@ dependencies {
     implementation 'com.android.support:appcompat-v7:25.3.1'
 
     // SwitchButton - https://github.com/kyleduo/SwitchButton
-    implementation 'com.kyleduo.switchbutton:library:1.4.5'
+    compile 'com.kyleduo.switchbutton:library:1.4.5'
 }
