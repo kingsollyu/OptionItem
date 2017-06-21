@@ -9,6 +9,7 @@ import android.view.Menu;
 import android.view.MenuItem;
 import android.view.View;
 import android.widget.LinearLayout;
+import android.widget.Toast;
 
 import com.sollyu.android.option.item.OptionItemView;
 
@@ -57,5 +58,9 @@ public class MainActivity extends AppCompatActivity {
         }
 
         return super.onOptionsItemSelected(item);
+    }
+
+    public void onClickTest(View view) {
+        Toast.makeText(this, "dasfasdf", Toast.LENGTH_SHORT).show();
     }
 }
