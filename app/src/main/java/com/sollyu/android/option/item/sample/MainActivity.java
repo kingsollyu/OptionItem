@@ -63,4 +63,8 @@ public class MainActivity extends AppCompatActivity {
     public void onClickTest(View view) {
         Toast.makeText(this, "dasfasdf", Toast.LENGTH_SHORT).show();
     }
+
+    public void onClickSwitch(View view) {
+        Toast.makeText(this, "ssssss", Toast.LENGTH_SHORT).show();
+    }
 }
