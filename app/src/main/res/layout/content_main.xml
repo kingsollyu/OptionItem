@@ -60,11 +60,5 @@
         android:layout_height="35dp"
         android:layout_marginTop="20dp"
         app:leftText="dafasdfsa"/>
-
-    <CheckBox
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:checked=""
-        />
-
+    
 </LinearLayout>
