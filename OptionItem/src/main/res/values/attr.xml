@@ -1,14 +1,21 @@
 <?xml version="1.0" encoding="utf-8"?>
 <resources>
+    <attr name="rightText" format="string"/>
+
     <declare-styleable name="OptionItemBase">
         <attr name="leftText" format="string"/>
     </declare-styleable>
 
     <declare-styleable name="OptionItemView">
-        <attr name="rightText" format="string"/>
+        <attr name="rightText"/>
     </declare-styleable>
 
     <declare-styleable name="OptionItemSwitch">
         <attr name="checked" format="boolean"/>
+    </declare-styleable>
+
+    <declare-styleable name="OptionItemEdit">
+        <attr name="hintText" format="string"/>
+        <attr name="rightText"/>
     </declare-styleable>
 </resources>

@@ -64,5 +64,14 @@
         android:onClick="onClickSwitch"
         app:leftText="fork"/>
 
+    <com.sollyu.android.option.item.OptionItemEdit
+        android:id="@+id/oieEdit"
+        android:layout_width="match_parent"
+        android:layout_height="35dp"
+        android:layout_marginTop="20dp"
+        android:onClick="onClickEdit"
+        app:leftText="编辑框"
+        app:rightText="输入内容" />
+
 
 </LinearLayout>

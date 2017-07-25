@@ -24,10 +24,10 @@ repositories {
 ```
 
 ### 添加引用
-使用最新版本[![](https://jitpack.io/v/kingsollyu/OptionItem.svg)](https://jitpack.io/#kingsollyu/OptionItem)
+使用最新版本： [![](https://jitpack.io/v/kingsollyu/OptionItem.svg)](https://jitpack.io/#kingsollyu/OptionItem)
 ```
 dependencies {
-    compile 'com.github.kingsollyu:OptionItem:last-version'
+    compile 'com.github.kingsollyu:OptionItem:最新版本'
 }
 ```
 
@@ -66,6 +66,18 @@ dependencies {
         android:layout_marginTop="20dp"
         android:onClick="onClickSwitch"
         app:leftText="fork"/>
+```
+
+### 编辑框
+```xml
+    <com.sollyu.android.option.item.OptionItemEdit
+        android:id="@+id/oieEdit"
+        android:layout_width="match_parent"
+        android:layout_height="35dp"
+        android:layout_marginTop="20dp"
+        android:onClick="onClickEdit"
+        app:leftText="编辑框"
+        app:rightText="输入内容" />
 ```
 
 ## 拓展
