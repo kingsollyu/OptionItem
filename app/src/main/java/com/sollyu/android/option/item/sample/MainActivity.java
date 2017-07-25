@@ -10,6 +10,7 @@ import android.view.MenuItem;
 import android.view.View;
 import android.widget.Toast;
 
+import com.sollyu.android.option.item.OptionItemEdit;
 import com.sollyu.android.option.item.OptionItemSwitch;
 import com.sollyu.android.option.item.OptionItemView;
 
@@ -17,6 +18,7 @@ public class MainActivity extends AppCompatActivity {
 
     private OptionItemView   mOivAbout  = null;
     private OptionItemSwitch mOivSwitch = null;
+    private OptionItemEdit   mOivEdit   = null;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -33,8 +35,10 @@ public class MainActivity extends AppCompatActivity {
             }
         });
 
-        mOivAbout = (OptionItemView) findViewById(R.id.oivAbout);
+        mOivAbout  = (OptionItemView) findViewById(R.id.oivAbout);
         mOivSwitch = (OptionItemSwitch) findViewById(R.id.oisSwitch);
+        mOivEdit   = (OptionItemEdit) findViewById(R.id.oieEdit);
+
     }
 
     @Override
@@ -69,5 +73,9 @@ public class MainActivity extends AppCompatActivity {
     }
 
     public void onClickSettings(View view) {
+    }
+
+    public void onClickEdit(View view) {
+        Toast.makeText(this, "输入内容: " + mOivEdit.getRightEditText() , Toast.LENGTH_SHORT).show();
     }
 }
