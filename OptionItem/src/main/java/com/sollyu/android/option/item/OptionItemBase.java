@@ -22,6 +22,7 @@ import android.support.annotation.Nullable;
 import android.support.annotation.StringRes;
 import android.util.AttributeSet;
 import android.view.Gravity;
+import android.widget.CheckBox;
 import android.widget.LinearLayout;
 import android.widget.TextView;
 
@@ -32,6 +33,7 @@ import android.widget.TextView;
  */
 class OptionItemBase extends LinearLayout {
     private TextView mLeftTextView = null;
+    private CheckBox mLeftCheckBox = null;
 
     public OptionItemBase(Context context) {
         super(context);
@@ -43,6 +45,7 @@ class OptionItemBase extends LinearLayout {
 
     protected void initView(Context context) {
         mLeftTextView = new TextView(context);
+        mLeftCheckBox = new CheckBox(context);
 
         TextView middleTextView = new TextView(context);
 
@@ -56,7 +59,9 @@ class OptionItemBase extends LinearLayout {
         mLeftTextView.setTextColor(context.getResources().getColor(android.R.color.black));
         mLeftTextView.setClickable(false);
         mLeftTextView.setSingleLine(true);
+        mLeftCheckBox.setVisibility(GONE);
 
+        this.addView(mLeftCheckBox, rightTextViewLayoutParams);
         this.addView(mLeftTextView, rightTextViewLayoutParams);
         this.addView(middleTextView, middleTextViewLayoutParams);
 
@@ -71,6 +76,8 @@ class OptionItemBase extends LinearLayout {
 
         TypedArray typedArray = context.obtainStyledAttributes(attrs, R.styleable.OptionItemBase);
         mLeftTextView.setText(typedArray.getText(R.styleable.OptionItemBase_leftText));
+        mLeftCheckBox.setChecked(typedArray.getBoolean(R.styleable.OptionItemBase_leftCheck, false));
+        if (mLeftCheckBox.isChecked()) mLeftCheckBox.setVisibility(VISIBLE);
         typedArray.recycle();
     }
 
@@ -98,4 +105,15 @@ class OptionItemBase extends LinearLayout {
         getLeftTextView().setText(resid);
     }
 
+    public CheckBox getLeftCheckBox() {
+        return mLeftCheckBox;
+    }
+
+    public boolean isChecked() {
+        return mLeftCheckBox.isChecked();
+    }
+
+    public void setChecked(boolean checked) {
+        mLeftCheckBox.setChecked(checked);
+    }
 }
