@@ -56,7 +56,6 @@ class OptionItemBase extends LinearLayout {
         middleTextViewLayoutParams.leftMargin = dip2px(context, 15.0f);
 
         middleTextView.setClickable(false);
-        mLeftTextView.setTextColor(context.getResources().getColor(android.R.color.black));
         mLeftTextView.setClickable(false);
         mLeftTextView.setSingleLine(true);
         mLeftCheckBox.setVisibility(GONE);
@@ -65,10 +64,8 @@ class OptionItemBase extends LinearLayout {
         this.addView(mLeftTextView, rightTextViewLayoutParams);
         this.addView(middleTextView, middleTextViewLayoutParams);
 
-        this.setBackgroundColor(context.getResources().getColor(android.R.color.white));
         this.setOrientation(LinearLayout.HORIZONTAL);
         this.setGravity(Gravity.CENTER_VERTICAL);
-        this.setBackgroundResource(R.drawable.option_item_selector_background);
     }
 
     protected void initView(Context context, @Nullable AttributeSet attrs) {
