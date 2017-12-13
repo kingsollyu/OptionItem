@@ -75,6 +75,11 @@ class OptionItemBase extends LinearLayout {
         mLeftTextView.setText(typedArray.getText(R.styleable.OptionItemBase_leftText));
         mLeftCheckBox.setChecked(typedArray.getBoolean(R.styleable.OptionItemBase_leftCheck, false));
         if (mLeftCheckBox.isChecked()) mLeftCheckBox.setVisibility(VISIBLE);
+
+        if (typedArray.getResourceId(R.styleable.OptionItemBase_leftStyle, 0) != 0) {
+            mLeftTextView.setTextAppearance(context, typedArray.getResourceId(R.styleable.OptionItemBase_leftStyle, 0));
+        }
+
         typedArray.recycle();
     }
 
