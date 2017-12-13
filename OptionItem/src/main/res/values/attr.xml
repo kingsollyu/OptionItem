@@ -21,10 +21,12 @@
     <declare-styleable name="OptionItemBase">
         <attr name="leftText" format="string"/>
         <attr name="leftCheck" format="boolean"/>
+        <attr name="leftStyle" format="reference"/>
     </declare-styleable>
 
     <declare-styleable name="OptionItemView">
         <attr name="rightText"/>
+        <attr name="rightStyle" format="reference"/>
     </declare-styleable>
 
     <declare-styleable name="OptionItemSwitch">

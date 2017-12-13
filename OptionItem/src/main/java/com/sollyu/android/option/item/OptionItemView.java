@@ -67,6 +67,11 @@ public class OptionItemView extends OptionItemBase {
         super.initView(context, attrs);
         TypedArray typedArray = context.obtainStyledAttributes(attrs, R.styleable.OptionItemView);
         mRightTextView.setText(typedArray.getText(R.styleable.OptionItemView_rightText));
+
+        if (typedArray.getResourceId(R.styleable.OptionItemView_rightStyle, 0) != 0) {
+            mRightTextView.setTextAppearance(context, typedArray.getResourceId(R.styleable.OptionItemView_rightStyle, 0));
+        }
+
         typedArray.recycle();
     }
 

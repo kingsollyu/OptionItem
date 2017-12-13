@@ -81,12 +81,13 @@
 
     <com.sollyu.android.option.item.OptionItemEdit
         android:id="@+id/oieEdit"
+        style="@style/OptionItem"
         android:layout_width="match_parent"
         android:layout_height="35dp"
         android:layout_marginTop="20dp"
         android:onClick="onClickEdit"
         app:leftText="Edit"
-        app:rightText="sollyu@qq.com" />
+        app:rightText="sollyu@qq.com"/>
 
     <com.sollyu.android.option.item.OptionItemView
         android:layout_width="match_parent"
